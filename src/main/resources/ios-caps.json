@@ -1,6 +1,6 @@
 {
   "platformName": "iOS",
   "automationName": "XCUITest",
-  "deviceName": "iPhone 13",
+  "deviceName": "iPhone 14 Pro Max",
   "app": "src/test/resources/TestApp.app"
 }

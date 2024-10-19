@@ -10,7 +10,13 @@ public class IOSTest extends BaseTest {
         String actualSum = new HomePage(this.driver)
                 .enterTwoNumbersAndCompute("5", "5")
                 .getSum();
-
         Assert.assertEquals(actualSum, "10");
+
+
+    }
+    @Test(groups = {TestGroups.IOS})
+    public void handleAlert() {
+        new HomePage(this.driver).clickAlert();
+
     }
 }

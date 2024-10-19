@@ -10,6 +10,9 @@ public class HomePage extends BasePage {
     private final By secondNumber = By.name("IntegerB");
     private final By computeSumButton = By.name("ComputeSumButton");
     private final By answer = By.name("Answer");
+    private final By showAlert=By.name("show alert");
+    private final By OK=By.id("OK");
+
 
     public HomePage(AppiumDriver driver) {
         super(driver);
@@ -25,6 +28,15 @@ public class HomePage extends BasePage {
     public HomePage typeFirstNumber(String number) {
         WebElement firstNoElement = getElement(firstNumber);
         type(firstNoElement, number);
+        return this;
+    }
+
+    public HomePage clickAlert() {
+        WebElement alertLink = getElement(showAlert);
+        click(alertLink);
+        WebElement OK_alert = getElement(OK);
+        click(OK_alert);
+
         return this;
     }
 
